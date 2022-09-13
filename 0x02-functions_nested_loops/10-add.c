@@ -7,9 +7,10 @@
  */
 int main(void)
 {
-  int n;
+  int a;
+  int b;
 
-  n = add(89, 9);
-  printf("%d\n", n);
-  return (0);
+  int add(int a, int b)
+
+    return (a + b);
 }
