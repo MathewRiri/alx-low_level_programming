@@ -1,55 +1,51 @@
-#include "holberton.h"
-
+#include "main.h"
 /**
- * print_times_table - prints times table for numbers from 0-14
- * @n: An input integer value
- * Return: Nothing
- */
+* print_times_table -  prints n times table
+* starting with 0
+* Description: prints n times table
+* @n: is a variable
+* Return: void
+*/
 void print_times_table(int n)
 {
-	int i, j;
+	int r, c, prod_ans;
 
-	if (n > 0 && n < 15)
+	if (n >= 0 && n < 15)
 	{
-		for (i = 0; i <= n; i++)
+		for (r = 0; r <= n; r++)
 		{
-			_putchar('0');
-			for (j = 1; j <= n; j++)
-				putformat(i * j);
+			for (c = 0; c <= n; c++)
+			{
+				prod_ans = r * c;
+
+				if (c == 0)
+					_putchar('0');
+				else if (prod_ans < 10)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(prod_ans % 10 + '0');
+				}
+				else if (prod_ans >= 10 && prod_ans < 100)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar((prod_ans / 10) % 10 + '0');
+					_putchar(prod_ans % 10 + '0');
+				}
+				else if (prod_ans > 99 && prod_ans < 1000)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(prod_ans / 100 + '0');
+					_putchar((prod_ans / 10) % 10 + '0');
+					_putchar(prod_ans % 10 + '0');
+				}
+			}
 			_putchar('\n');
 		}
-	}
-}
-
-/**
- * putformat - formatted characters to output
- * @n: number to format
- * Return: nothing
- */
-void putformat(int n)
-{
-	if (n <= 9)
-	{
-		_putchar(',');
-		_putchar(' ');
-		_putchar(' ');
-		_putchar(' ');
-		_putchar(n + '0');
-	}
-	else if (n > 9 && n <= 99)
-	{
-		_putchar(',');
-		_putchar(' ');
-		_putchar(' ');
-		_putchar(n / 10 + '0');
-		_putchar(n % 10 + '0');
-	}
-	else
-	{
-		_putchar(',');
-		_putchar(' ');
-		_putchar(n / 100 + '0');
-		_putchar(n / 10 % 10 + '0');
-		_putchar(n % 10 + '0');
 	}
 }
