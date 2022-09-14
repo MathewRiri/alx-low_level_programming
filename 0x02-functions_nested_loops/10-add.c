@@ -2,12 +2,12 @@
 
 /**
  * add - Adds two integers
- * @num1: first integer 
- * @num2: second integer 
- * Description: Function that adds two integers and returns the result
- * Return: Result of addition
+ * @num1: first integer to be added 
+ * @num2: second integer to be added
+ *
+ * Return: The result of the addition
  */
 int add(int num1, int num2)
 {
-	return (num1 +num2);
+	return (num1 + num2);
 }
