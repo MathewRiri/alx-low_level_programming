@@ -9,9 +9,10 @@
 * @b: is the second integer
 * Return: Sum of two integers
 */
-
+int main(void){
+	
 int add(int a,  int b)
-{
+
 	int tot_sum;
 
 	tot_sum = (a + b);
