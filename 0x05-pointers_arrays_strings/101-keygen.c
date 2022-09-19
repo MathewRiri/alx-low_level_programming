@@ -8,7 +8,6 @@
  *
  * Return: generated password
  */
-
 int main(void)
 {
 	char c;
