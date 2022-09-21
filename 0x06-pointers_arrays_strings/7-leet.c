@@ -4,6 +4,7 @@
 *@str:string that will be encoded
 *Return:returns encoded string
 */
+
 char *leet(char *str)
 {
 	int index1 = 0, index2;
